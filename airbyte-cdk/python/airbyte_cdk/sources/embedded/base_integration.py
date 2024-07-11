@@ -12,8 +12,7 @@ from airbyte_cdk.sources.embedded.tools import get_defined_id
 from airbyte_cdk.sources.utils.schema_helpers import check_config_against_spec_or_exit
 from airbyte_protocol.models import AirbyteRecordMessage, AirbyteStateMessage, SyncMode, Type
 
-TOutput = TypeVar("TOutput")
-
+TOutput = TypeVar('TOutput')
 
 class BaseEmbeddedIntegration(ABC, Generic[TConfig, TOutput]):
     def __init__(self, runner: SourceRunner[TConfig], config: TConfig):
